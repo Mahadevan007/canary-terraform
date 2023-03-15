@@ -32,7 +32,7 @@ npm manifest:
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {
-      "lint": "eslint --ext .js,.ts,.tsx ./lambda/src/",
+      "lint": "eslint --ext .js,.ts,.tsx",
       "script:build-dependency-layer": "yarn install --prod; ./scripts/build-dependency-layer.sh; yarn install;",
       "build": "tsc",
       "build:logout": "esbuild lambda/src/index.ts --bundle --minify --sourcemap --platform=node --target=es2020 --outfile=dist/session-events-websocket-handler/index.js && yarn postbuild:logout",
